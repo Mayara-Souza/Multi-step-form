@@ -21,4 +21,35 @@ body{
     --labaster: hsl(231, 100%, 99%);
 
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+}
+
+div#sidebar{
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    height: 25vh;
+}
+
+section.steps ol{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    
+}
+
+section.steps ol li{
+    list-style: none;
+
+    margin-top: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .2rem;
+
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 100%;
+    
+    text-align: center;
+    font-size: .8rem;
 }
