@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap'); 
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*primary colors*/
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    /*neutral colors*/
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --labaster: hsl(231, 100%, 99%);
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+
+    background-color: var(--magnolia);
+}
+
+div#sidebar{
+    background-image: url(./assets/images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    height: 25vh;
+}
+
+section.steps ol{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    
+}
+
+section.steps ol li{
+    list-style: none;
+
+    margin-top: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .2rem;
+
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 100%;
+
+    text-align: center;
+    font-size: .8rem;
+}
+
+
+section.form{
+    display: flex;
+    position: relative;
+    top: -6rem;
+    margin: 0 1rem;
+    height: 75vh;
+
+    background-color: #fff;
+
+    border-radius: 1rem;
+}
+
+div.boundary{
+    padding: 2rem 1rem 0;
+}
+
+div.boundary > h1,
+div.input-area > label{
+    color: var(--marine-blue);
+}
+
+div.boundary h1 + p{
+    color: var(--cool-gray);
+    
+    margin: 1rem 0;
+}
+
+div.input-area{
+    display: flex;
+    flex-direction: column;
+}
+
+div.input-area input{
+   padding: .5rem;
+   margin-bottom: 1rem;
+
+   border: 1px solid var(--cool-gray);
+   border-radius: 5px;
+}
+
+div.boundary{
+    display: flex;
+    flex-direction: column;
+}
+
+div.boundary button.next-step{
+    position: absolute;
+    bottom: calc(100% - 85vh);
+    background-color: var(--marine-blue);
+    color: #fff;
+    font-weight: 700;
+
+    border: none;
+    border-radius: .5rem;
+
+    width: 6rem;
+    height: 2.5rem;
+
+    align-self: flex-end;
+   
+}
+
+
+section.hidden{
+    display: none;
+}
