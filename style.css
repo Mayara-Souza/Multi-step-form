@@ -27,8 +27,9 @@ body{
 }
 
 div#sidebar{
-    background-image: url(./assets/images/bg-sidebar-mobile.svg);
-    background-repeat: round;
+    /* background-image: url(./assets/images/bg-sidebar-mobile.svg); */
+    background-repeat: repeat-x;
+    object-fit: cover;
     width: 100vw;
     min-height: 25vh;
     max-height: 40vh;
@@ -37,25 +38,31 @@ div#sidebar{
 section.steps ol{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
-    gap: 1rem;
-    
+    height: 15vh;
+    gap: 1rem; 
 }
 
 section.steps ol li{
     list-style: none;
 
-    margin-top: 2rem;
     width: 1.5rem;
     height: 1.5rem;
-    padding: .2rem;
 
     border: 1px solid #fff;
     color: #fff;
     border-radius: 100%;
 
-    text-align: center;
-    font-size: .8rem;
+    padding-top: 2px;
+    text-align:center;  
+    font-size: .75rem;
+}
+
+section.steps ol :is(li.active){
+    background-color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+    color: #000;
 }
 
 section.form{
@@ -119,6 +126,62 @@ div.boundary button.next-step{
     align-self: flex-end;
    
 }
+
+footer > p{
+    display: inline;
+}
+
+/* ========= Tablets and Ipads ===================*/
+@media (min-width: 768px) {
+  
+    div.container{
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 97vh 3vh;
+        grid-template-areas: "sidebar form"
+    }
+
+    div#sidebar{
+        grid-area: sidebar;
+        border-radius: 10px;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        margin: .8rem 0 0 .8rem;
+        padding: 2rem;
+        
+
+            
+        background-image: url(./assets/images/bg-sidebar-desktop.svg);
+        background-repeat: no-repeat;
+   
+        object-fit: cover;
+    }
+
+    section.steps ol{
+        display: flex;
+        align-items: flex-start;
+        
+        flex-direction: column;
+        height: 15vh;
+        gap: 1.5rem; 
+        
+    }
+
+    
+
+    section.form{
+        grid-area: form;
+        top: 0;
+        
+    }
+
+   
+    
+}  
+
+
 
 
 section.hidden{
