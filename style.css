@@ -96,6 +96,7 @@ section.form{
     background-color: #fff;
 
     border-radius: 1rem;
+    padding-bottom: 1rem;
 }
 
 div.boundary{
@@ -162,6 +163,38 @@ div.input-area input{
 .btn-options > span,
 .toogle > p{
     color: var(--cool-gray);
+}
+
+.btn-options .step-3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+     justify-content: center;
+     align-items: start;
+  
+    width: 100%;
+    height: 5rem;
+}
+
+.btn-options .step-3 input{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    
+}
+
+.btn-options .step-3 label{
+    display: block;
+}
+
+.btn-options .step-3 span:first-of-type{
+    display: block;
+}
+
+.btn-options .step-3 span:last-child{
+    display: block;
+    align-self: end;
 }
 
 .toogle{
