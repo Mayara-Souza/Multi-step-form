@@ -7,8 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Multi-step form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -21,14 +19,18 @@
   <div id="sidebar">
     <section class="steps">
       <ol>
-        <li class="active">1</li>
-          <div class="step">
-            <p class="aditional-details">STEP 1</p>
-            <span>YOUR INFO</span>
-          </div>
-        <li class="">2</li>
-        <li class="">3</li>
-        <li class="">4</li>
+        <li class="active">
+          <span>1</span>
+        </li>
+        <li class="">
+          <span>2</span>
+        </li>
+        <li class="">
+          <span>3</span>
+        </li>
+        <li class="">
+          <span>4</span>
+        </li>
       </ol>
     </section>
   </div>
@@ -36,7 +38,7 @@
 
 
   <!-- Step 1 start -->
-  <section id="" class="form">
+  <section id="hidden" class="form">
     <div class="boundary">
       <h1>Personal info</h1>
       <p>Please provide your name, email address, and phone number.</p>
@@ -48,17 +50,14 @@
           name="name" 
           id="name" 
           placeholder="e.g. Stephen King">
-        </div>
         
-        <div class="input-area">
           <label for="email">Email Address</label>
           <input type="email" 
           name="email" 
           id="email" 
           placeholder="e.g. stephenking@lorem.com">
-        </div>
         
-        <div class="input-area">
+
           <label for="phone_number">Phone Number</label>
           <input type="tel" 
           name="phone" 
@@ -66,166 +65,159 @@
           maxlength="11"
           placeholder="e.g. +1 234 567 890">
         </div>
-      </form>
       <button class="next-step">Next Step</button>
     </div>
   </section>
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
-  <section id="" class="form hidden">
+  <section id="hidden" class="form">
     <div class="boundary">
       <h1>Select your plan</h1>
       <p>You have the option of monthly or yearly billing.</p>
 
-      <form action="#">
         <!--Monthly options-->
-        <div class="input-area visible" id="monthly">
-          <img src="./assets/images/icon-arcade.svg" alt="Arcade plan icon.">
-          <p>Arcade</p>
-          <span>$9/mo</span>
-        </div>
+        <div class="input-area" id="monthly">
+          <button class="btn-options">
+            <img src="./assets/images/icon-arcade.svg" alt="Arcade plan icon.">
+            <p>Arcade</p>
+            <span>$9/mo</span>
+          </button>
+              
+          <button class="btn-options">
+            <img src="./assets/images/icon-advanced.svg" alt="Advanced plan icon.">
+            <p>Advanced</p>
+            <span>$12/mo</span>
+          </button>
           
-        <div class="input-area visible" id="monthly">
-          <img src="./assets/images/icon-advanced.svg" alt="Advanced plan icon.">
-          <p>Advanced</p>
-          <span>$12/mo</span>
-        </div>
-          
-        <div class="input-area visible" id="monthly">
-          <img src="./assets/images/icon-pro.svg" alt="Pro plan icon.">
-          <p>Pro</p>
-          <span>$15/mo</span>
+          <button class="btn-options">
+            <img src="./assets/images/icon-pro.svg" alt="Pro plan icon.">
+            <p>Pro</p>
+            <span>$15/mo</span>
+          </button>
         </div>
 
         <!--Yearly options-->
-        <div class="input-area" id="yearly">
-          <img src="./assets/images/icon-arcade.svg" alt="Arcade plan icon.">
-          <p>Arcade</p>
-          <span>$90/yo</span>
-          <p>2 months free</p>
-        </div>
-        
-        <div class="input-area" id="yearly">
-          <img src="./assets/images/icon-advanced.svg" alt="Advanced plan icon.">
-          <p>Advanced</p>
-          <span>$120/yo</span>
-          <p>2 months free</p>
-        </div>
-        
-        <div class="input-area" id="yearly">
-          <img src="./assets/images/icon-pro.svg" alt="Pro plan icon.">
-          <p>Pro</p>
-          <span>$150/yo</span>
-          <p>2 months free</p>
-        </div>
+        <div class="input-area" id=" yearly">
+          <button class="btn-options">
+            <img src="./assets/images/icon-arcade.svg" alt="Arcade plan icon.">
+            <p>Arcade</p>
+            <span>$90/yo</span>
+            <p>2 months free</p>
+          </button>
 
-        <div id="toogle">Adicionar botão toogle.</div>
-      </form>
-      <button class="go-back">Go Back</button>
-      <button class="next-step">Next Step</button>
+          <button class="btn-options">
+            <img src="./assets/images/icon-advanced.svg" alt="Advanced plan icon.">
+            <p>Advanced</p>
+            <span>$120/yo</span>
+            <p>2 months free</p>
+          </button>
+          
+          <button class="btn-options">
+            <img src="./assets/images/icon-pro.svg" alt="Pro plan icon.">
+            <p>Pro</p>
+            <span>$150/yo</span>
+            <p>2 months free</p>
+          </button>
+          </div>
+        <div class="toogle">
+          <p class="active">Monthly</p>
+          <button id="btn-toogle"><div></div></button>
+          <p>Yearly</p>
+        </div>
     </div>
   </section>
   <!-- Step 2 end -->
 
   <!-- Step 3 start -->
-  <section id="" class="form hidden">
+  <section id="" class="form">
     <div class="boundary">
       <h1>Pick add-ons</h1>
       <p>Add-ons help enhance your gaming experience.</p>
 
       <!--Monthly options-->
-      <form action="#">
         <div class="input-area">
-          <input type="checkbox" 
-          name="onlineService" 
-          id="online-service">
-          <label for="online-service">Online service</label>
-          <span>Access to multiplayer games</span>
-          <div><span>+$1/mo</span></div>
-        </div>
 
-        <div class="input-area">
-          <input type="checkbox" 
-          name="storage" 
-          id="storage">
-          <label for="storage">Larger storage</label>
-          <span>Extra 1TB of cloud save</span>
-          <div><span>+$2/mo</span></div>
-        </div>
+          <button class="btn-options">
+            <div class="step-3">
+              <input type="checkbox" 
+              name="onlineService" 
+              id="online-service">
+              <label for="online-service">Online service</label>
+              <span>Access to multiplayer games</span>
+              <span>+$1/mo</span>
+            </div>
+          </button>
 
-        <div class="customizable">
-          <input type="checkbox" 
-          name="customizable" 
-          id="customizable">
-          <label for="customizable">Customizable Profile</label>
-          <span>Custom theme on your profile</span>
-          <div><span>+$2/mo</span></div>
+          <button class="btn-options">
+            <div class="step-3">
+              <input type="checkbox" 
+              name="storage" 
+              id="storage">
+              <label for="storage">Larger storage</label>
+              <span>Extra 1TB of cloud save</span>
+              <span>+$2/mo</span>
+            </div>
+          </button>
+
+          <button class="btn-options">
+            <div class="step-3">
+              <input type="checkbox" 
+              name="customizable" 
+              id="customizable">
+              <label for="customizable">Customizable Profile</label>
+              <span>Custom theme on your profile</span>
+              <span>+$2/mo</span>
+            </div>
+          </button>
         </div>
-      </form>
-      <button class="go-back">Go Back</button>
-      <button class="next-step">Next Step</button>
 
       <!--Yearly options-->
-      <form action="#">
-        <div class="input-area">
+        <!-- <div class="input-area">
           <input type="checkbox" 
           name="onlineService" 
           id="online-service">
           <label for="online-service">Online service</label>
           <span>Access to multiplayer games</span>
           <div><span>+$10/yo</span></div>
-        </div>
 
-        <div class="input-area">
           <input type="checkbox" 
           name="storage" 
           id="storage">
           <label for="storage">Larger storage</label>
           <span>Extra 1TB of cloud save</span>
           <div><span>+$20/yo</span></div>
-        </div>
 
-        <div class="customizable">
           <input type="checkbox" 
           name="customizable" 
           id="customizable">
           <label for="customizable">Customizable Profile</label>
           <span>Custom theme on your profile</span>
           <div><span>+$20/yo</span></div>
-        </div>
-      </form>
-      <button class="go-back">Go Back</button>
-      <button class="next-step">Next Step</button>
+        </div> -->
     </div>
   </section>
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
-  <section id="" class="form hidden">
+  <section id="hidden" class="form">
     <div class="boundary">
       <h1>Finishing up</h1>
       <p>Double-check everything looks OK before confirming.</p>
 
        <!-- Dynamically add subscription and add-on selections here -->
       <div>
-        <div>
-          <p>Arcade (monthly/yearly)</p>
-          <span>$</span>
-          <a href="#">Change</a>
-        </div>
-        
-        <div>
-          <p>Online Service</p>
-          <span>$</span>
-        </div>
-
-        <div>
-          <p>Larger Storage</p>
-          <span>$</span>
-        </div>
+        <p>Arcade (monthly/yearly)</p>
+        <span>$</span>
+        <a href="#">Change</a>
+      
+        <p>Online Service</p>
+        <span>$</span>
+      
+        <p>Larger Storage</p>
+        <span>$</span>
       </div>
-
+      
       <div>
         <p>Total per (month/year)</p>
         <span>$</span>
@@ -237,10 +229,9 @@
   </section>
   <!-- Step 4 end -->
 
-  <!-- Step 5 start -->
-  <section id="" class="form hidden">
+  <!-- finish screen -->
+  <section id="hidden" class="form">
     <div class="boundary">
-
       <div>
         <img src="./assets/images/icon-thank-you.svg" alt="Finishing icon.">
         <h1>Thank you!</h1>
@@ -249,16 +240,15 @@
           to email us at support@loremgaming.com.
         </p>
       </div>
-
     </div>
   </section>
-  <!-- Step 5 end -->
+  <!-- finish screen end -->
   
-  <footer class="attribution">
-    <p>Challenge by</p> <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    <p>Coded by</p> <a href="#">Mayara Souza</a>.
+  <footer class="btn-menu">
+      <button class="btn-back">Go Back</button>
+      <button class="btn-next">Next Step</button>
   </footer>
-
   </div>
+
 </body>
 </html>
