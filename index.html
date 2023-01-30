@@ -73,7 +73,7 @@
   <!-- Step 1 end -->
 
   <!-- Step 2 start -->
-  <section id="" class="form">
+  <section id="hidden" class="form">
     <div class="boundary">
       <h1>Select your plan</h1>
       <p>You have the option of monthly or yearly billing.</p>
@@ -132,7 +132,7 @@
   <!-- Step 2 end -->
 
   <!-- Step 3 start -->
-  <section id="hidden" class="form">
+  <section id="" class="form">
     <div class="boundary">
       <h1>Pick add-ons</h1>
       <p>Add-ons help enhance your gaming experience.</p>
@@ -140,64 +140,87 @@
       <!--Monthly options-->
         <div class="input-area">
 
-          <button class="btn-options">
+          <button class="btn-options monthly ">
             <div class="step-3">
               <input type="checkbox" 
               name="onlineService" 
               id="online-service">
+              <div class="extra-info">
               <label for="online-service">Online service</label>
               <span>Access to multiplayer games</span>
               <span>+$1/mo</span>
             </div>
+            </div>
           </button>
 
-          <button class="btn-options">
+          <button class="btn-options monthly ">
             <div class="step-3">
               <input type="checkbox" 
               name="storage" 
               id="storage">
-              <label for="storage">Larger storage</label>
-              <span>Extra 1TB of cloud save</span>
-              <span>+$2/mo</span>
+              <div class="extra-info">
+                <label for="storage">Larger storage</label>
+                <span>Extra 1TB of cloud save</span>
+                <span>+$2/mo</span>  
+              </div>
             </div>
           </button>
 
-          <button class="btn-options">
+          <button class="btn-options monthly ">
             <div class="step-3">
               <input type="checkbox" 
               name="customizable" 
               id="customizable">
-              <label for="customizable">Customizable Profile</label>
-              <span>Custom theme on your profile</span>
-              <span>+$2/mo</span>
+              <div class="extra-info">
+                <label for="customizable">Customizable Profile</label>
+                <span>Custom theme on your profile</span>
+                <span>+$2/mo</span>  
+              </div>
             </div>
           </button>
-        </div>
+
 
       <!--Yearly options-->
-        <!-- <div class="input-area">
+      <button class="btn-options yearly active">
+        <div class="step-3">
           <input type="checkbox" 
           name="onlineService" 
           id="online-service">
-          <label for="online-service">Online service</label>
-          <span>Access to multiplayer games</span>
-          <div><span>+$10/yo</span></div>
-
+          <div class="extra-info">
+            <label for="online-service">Online service</label>
+            <span>Access to multiplayer games</span>
+            <span>+$10/yo</span>  
+          </div>
+        </div>
+      </button>
+        
+      <buton class="btn-options yearly active">
+        <div class="step-3">
           <input type="checkbox" 
           name="storage" 
           id="storage">
-          <label for="storage">Larger storage</label>
-          <span>Extra 1TB of cloud save</span>
-          <div><span>+$20/yo</span></div>
+          <div class="extra-info">
+            <label for="storage">Larger storage</label>
+            <span>Extra 1TB of cloud save</span>
+            <span>+$20/yo</span>  
+          </div>
+        </div>
+      </buton>    
 
+      <buton class="btn-options yearly active">
+        <div class="step-3">
           <input type="checkbox" 
           name="customizable" 
           id="customizable">
-          <label for="customizable">Customizable Profile</label>
-          <span>Custom theme on your profile</span>
-          <div><span>+$20/yo</span></div>
-        </div> -->
-    </div>
+          <div class="extra-info">
+            <label for="customizable">Customizable Profile</label>
+            <span>Custom theme on your profile</span>
+            <span>+$20/yo</span>  
+          </div>
+        </div>
+      </buton>
+    </div> 
+  </div>
   </section>
   <!-- Step 3 end -->
 
