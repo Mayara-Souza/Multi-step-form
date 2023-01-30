@@ -145,6 +145,10 @@ div.input-area input{
     border-radius: .5rem;
 }
 
+.btn-options.active{
+    animation: fadeIn 1s;
+}
+
 .btn-options img {
     height: 3rem;
     max-width: fit-content;
@@ -198,7 +202,6 @@ div.input-area input{
 .btn-options:not(.active){
     display: none;
 }
-
 
 .toogle{
     margin: 2rem 0;
@@ -266,6 +269,11 @@ div.input-area input{
 .btn-next{
     background-color: var(--marine-blue);
     color: #fff;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100 {opacity: 1;}
 }
 
 
