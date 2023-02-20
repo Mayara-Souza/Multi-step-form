@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <script src="./scirpt.js"/>
+  <script src="./scirpt.js"></script>
   <title>Frontend Mentor | Multi-step form</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -140,61 +140,63 @@
       <!--Monthly options-->
         <div class="input-area">
 
-          <button class="btn-options monthly ">
-            <div class="step-3">
-              <input type="checkbox" 
-              name="onlineService" 
-              id="online-service">
-              <div class="extra-info">
-              <label for="online-service">Online service</label>
-              <span>Access to multiplayer games</span>
-              <span>+$1/mo</span>
-            </div>
-            </div>
-          </button>
-
-          <button class="btn-options monthly ">
+          <buton class="btn-options monthly  ">
             <div class="step-3">
               <input type="checkbox" 
               name="storage" 
               id="storage">
+              <span class="checkmark"></span>
+              <div class="extra-info">
+                <label for="online-service">Online Service</label>
+                <span>Acces to multiplayer games</span>
+                <span>+$1/mo</span>  
+              </div>
+            </div>
+          </buton> 
+
+          <buton class="btn-options monthly  ">
+            <div class="step-3">
+              <input type="checkbox" 
+              name="storage" 
+              id="storage">
+              <span class="checkmark"></span>
               <div class="extra-info">
                 <label for="storage">Larger storage</label>
                 <span>Extra 1TB of cloud save</span>
                 <span>+$2/mo</span>  
               </div>
             </div>
-          </button>
+          </buton> 
 
-          <button class="btn-options monthly ">
+          <buton class="btn-options monthly  ">
             <div class="step-3">
               <input type="checkbox" 
-              name="customizable" 
-              id="customizable">
+              name="storage" 
+              id="storage">
+              <span class="checkmark"></span>
               <div class="extra-info">
-                <label for="customizable">Customizable Profile</label>
+                <label for="customizable-profile">Customizable profile</label>
                 <span>Custom theme on your profile</span>
                 <span>+$2/mo</span>  
               </div>
             </div>
-          </button>
-
+          </buton> 
 
       <!--Yearly options-->
-      <button class="btn-options yearly active">
+      <buton class="btn-options yearly ">
         <div class="step-3">
           <input type="checkbox" 
-          name="onlineService" 
-          id="online-service">
+          name="storage" 
+          id="storage">
           <div class="extra-info">
-            <label for="online-service">Online service</label>
-            <span>Access to multiplayer games</span>
+            <label for="online-service">Online Service</label>
+            <span>Acces to multiplayer games</span>
             <span>+$10/yo</span>  
           </div>
         </div>
-      </button>
+      </buton>  
         
-      <buton class="btn-options yearly active">
+      <buton class="btn-options yearly ">
         <div class="step-3">
           <input type="checkbox" 
           name="storage" 
@@ -207,7 +209,7 @@
         </div>
       </buton>    
 
-      <buton class="btn-options yearly active">
+      <buton class="btn-options yearly ">
         <div class="step-3">
           <input type="checkbox" 
           name="customizable" 
@@ -225,31 +227,36 @@
   <!-- Step 3 end -->
 
   <!-- Step 4 start -->
-  <section id="hidden" class="form">
+  <section id="" class="form">
     <div class="boundary">
       <h1>Finishing up</h1>
       <p>Double-check everything looks OK before confirming.</p>
 
        <!-- Dynamically add subscription and add-on selections here -->
-      <div>
-        <p>Arcade (monthly/yearly)</p>
-        <span>$</span>
-        <a href="#">Change</a>
+      <div id="order-summary">
+        <p>Arcade monthly</p>
+
+        <div class="summary">
+          <a href="#">Change</a>
+          <span>$0/mo</span>
+        </div>
+
+        <div class="summary">
+          <p>Online Service</p>
+          <span>$+0</span>
+        </div>
       
-        <p>Online Service</p>
-        <span>$</span>
-      
-        <p>Larger Storage</p>
-        <span>$</span>
+        <div class="summary">
+          <p>Larger Storage</p>
+          <span>$+0</span>
+        </div>
       </div>
       
-      <div>
-        <p>Total per (month/year)</p>
-        <span>$</span>
+      <div id="total-price">
+        <p>Total per month</p>
+        <span>$0</span>
       </div>
 
-      <button class="go-back">Go Back</button>
-      <button class="next-step">Confirm</button>
     </div>
   </section>
   <!-- Step 4 end -->
