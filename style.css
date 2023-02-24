@@ -349,7 +349,7 @@ input[type=checkbox]:checked:after {
 }
 
 .summary:first-of-type{
-    padding-bottom: .8rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--light-gray);
 }
 
@@ -374,48 +374,101 @@ input[type=checkbox]:checked:after {
 /* ========= Tablets and Ipads ===================*/
 @media (min-width: 768px) {
   
-    div.container{
-        display: grid;
-        grid-template-columns: 35% 65%;
-        grid-template-rows: 97vh 3vh;
-        grid-template-areas: "sidebar form";
-        grid-area: sidebar;
-        background-image: url(./assets/images/bg-sidebar-desktop.svg);
-        background-repeat: no-repeat;
-   
-        object-fit: cover;
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100vw;
+        height: 100vh;
     }
 
-    div#sidebar{
-        /* grid-area: sidebar; */
-        border-radius: 10px;
-        background-image: none;
-        max-width: 100%;
-        max-height: 100%;
+    div.container{
+        width: 60rem;
+        height: 37.5rem; 
+        padding: 1rem;
 
-        margin: .8rem 0 0 .8rem;
-        padding: 2rem;
+        background-color: #fff;
+        border-radius: 1rem;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     section.steps ol{
-        display: flex;
-        align-items: flex-start;
-        
         flex-direction: column;
-        height: 15vh;
-        gap: 1.5rem; 
-        
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 1rem 2rem 0;
+        height: 18.7rem;
     }
 
-    
+    section.steps ol li{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    div#sidebar{
+        width: 16.8rem;
+        height: 100%;
+        background-image: url(./assets/images/bg-sidebar-desktop.svg);
+        object-fit: contain;
+
+        position: relative;
+    }
+
+    .step-description{
+        position: absolute;
+        top: 2rem;
+        height: 16rem;
+        margin-left: 5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .step-description div p:first-child{
+        color: var(--light-gray);
+        font-size: .75rem;
+    }
+
+    .step-description div p:nth-child(2){
+        font-weight: 500;
+        color: #fff;
+    }
 
     section.form{
-        grid-area: form;
+        position: relative;
         top: 0;
-        
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
     }
 
+    div.boundary > h1{
+        font-size: 2rem;
+    }
+
+    div.boundary, 
+    .btn-menu{
+        padding: 0;
+        width: 31.25rem;
+    }
+
+    .btn-menu{
+        padding: 0 1rem;
+    }
+
+    #order-summary,
+    #total-price{
+        font-size: 1.2rem;
+    }
    
     
 }  
